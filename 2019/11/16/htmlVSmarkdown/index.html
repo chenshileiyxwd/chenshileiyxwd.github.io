@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="阿磊的博客" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Markdown is not a replacement for HTML, or even close to it. Its syntax is very small, corresponding only to a very small subset of HTML tags. The idea is not to create a syntax that makes it easier t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="htmlVSmarkdown">
+<meta property="og:url" content="familytree.group&#x2F;2019&#x2F;11&#x2F;16&#x2F;htmlVSmarkdown&#x2F;index.html">
+<meta property="og:site_name" content="阿磊的博客">
+<meta property="og:description" content="Markdown is not a replacement for HTML, or even close to it. Its syntax is very small, corresponding only to a very small subset of HTML tags. The idea is not to create a syntax that makes it easier t">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="&#x2F;16&#x2F;htmlVSmarkdown&#x2F;src">
+<meta property="og:updated_time" content="2019-11-16T05:44:08.164Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="&#x2F;16&#x2F;htmlVSmarkdown&#x2F;src">
+
+<link rel="canonical" href="familytree.group/2019/11/16/htmlVSmarkdown/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>htmlVSmarkdown | 阿磊的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">阿磊的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="familytree.group/2019/11/16/htmlVSmarkdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Larry Chen">
+      <meta itemprop="description" content="在这里分享各种java面试技巧与学习心得">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="阿磊的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          htmlVSmarkdown
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-11-16 13:43:34 / Modified: 13:44:08" itemprop="dateCreated datePublished" datetime="2019-11-16T13:43:34+08:00">2019-11-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Markdown is not a replacement for HTML, or even close to it. Its syntax is very small, corresponding only to a very small subset of HTML tags. The idea is not to create a syntax that makes it easier to insert HTML tags. In my opinion, HTML tags are already easy to insert. The idea for Markdown is to make it easy to read, write, and edit prose.HTML is a publishing format; Markdown is a writing format. Thus, Markdown’s formatting syntax only addresses issues that can be conveyed inplain text.</p>
+<p>For any markup that is not covered by Markdown’s syntax, you simply use HTML itself. There’s no need to preface it or delimit it to indicate that you’re switching from Markdown to HTML; you just use the tags.</p>
+<p>The only restrictions are that block-level HTML elements — e.g. <div>, <table>, <pre>, <p>, etc. —must be separated from surrounding content by blank lines, and the start and end tags of the block should not be indented withtabs or spaces. Markdown is smart enough not to add extra (unwanted) </p><p> tags around HTML block-level tags.</p>
+<p>Daring Fireball创始人John Gruber关于Markdown的设计初衷的阐述可以看出，Markdown 是为了更简单方便地书写 HTML ，使我们更加专注于内容写作本身。<br>Markdown 提炼出日常记录行文所需的一套简单的格式标签集，使用纯文本符号标记即可进行快速排版，将我们从繁重的格式排版中解放出来，可作为日常笔记、速记的轻量级写作工具（Lightweight markup language）。<br>在 GitHub, Reddit, StackOverflow、JianShu 等一大批网站的影响下，Markdown在互联网上应用广泛，已经成为事实上的网络写作标准。例如，专为印象笔记（Evernote）打造的Markdown编辑器——马克飞象 ， 配合印象笔记强大的存储和同步功能，带来前所未有的书写体验；GitHub 上每个工程要求提供Markdown格式的README.md文件，作为项目首页的说明文档。<br>Markdown教程可参考《Markdown Tutorials》；Markdown编辑器可参考《Markdown Editors》。</p>
+<p>Markdown差不多可以满足日常笔记、速记、写作以及撰写博客需求，若某些文字需要以富文本形式渲染，可以直接在 Markdown 中嵌入 HTML 。<br>本文在开源免费的 macdown 下编辑完成，梳理 markdown 和 HTML 对应标签及日常撰写博客时可能用到的 HTML 补充富文本实现。内容由 markdown + HTML 混排，只能先导出为 HTML 文件，再贴过来，有些格式损失。</p>
+<p>1 HTML 注释：<!--...--><br>HTML 以&lt;!--开头，以--&gt;结尾的闭包定义注释，不在正文中显示。<br>下面这句注释你是看不到的：</p>
+<p>2 markdown 空格<br>由于在markdown中空格大部分时候都是起着排版控制作用，因此没法在行首或格式控制符之后输入空格。<br>此时，可直接输入HTML entities中的空格占位符：</p>
+<p>en space, U+2002 ISOpub<br>半方大的空白&ensp;或&#8194;<br>em space, U+2003 ISOpub<br>  全方大的空白&emsp;或&#8195;<br>no-break space = non-breaking space, U+00A0 ISOnum<br>    不断行的空白格&nbsp;或&#160;<br>一般行首输入两个全角空格（&emsp;）或四个半角空格（&nbsp;）进行缩进即可。</p>
+<p>3 HTML 超链接<br>3.1 锚点：<a>...</a><br>定义和用法<br><a> 标签用来实现跳转到指定锚点(anchor)或超链接（hyperlink）。<br><a> 元素最重要的属性是 href 属性，它指示链接的目标，可以是页内锚点，也可以是另一个站点页面。</a></a></p>
+<p>markdown对应标记</p>
+<p>Inline超链<br>markdown采用<a href></a>来定义超链接，中括号内是超链接文字标题，小括号内是超链接地址：<a href="href">title</a>。我们称这种为Inline方式超链。<br>Reference超链<br>与页内锚点对应的另一种是Reference方式的索引超链：<br>两个中括号[title][anchor]，第二个中括号中定义页内锚点名称（索引）；然后在其他地方采用[anchor]:href的格式定义anchor实际指向的锚点位置（href）。<br>自动超链<br>用尖括号包裹url，这样生成的url锚文本就是url本身，例如博客、邮箱地址。<br>示例</p>
+<p>页内锚点示例：<br>点我跳到本文结尾</p>
+<p>最权威的 HTML 学习资料：<br>W3School HTML 参考手册</p>
+<p>其他 HTML 学习参考资料：<br>HTML5 教程<br>HTML 教程<br>HTML 教程- (HTML5 标准)</p>
+<p>个人博客和邮箱：<br><a href="http://blog.csdn.net/phunxm" target="_blank" rel="noopener">http://blog.csdn.net/phunxm</a><br><a href="mailto:challenge4fun@qq.com" target="_blank" rel="noopener">challenge4fun@qq.com</a></p>
+<p>3.2 图片：<img><br>定义和用法<br>img 元素向网页中嵌入一幅图像。<br>请注意，从技术上讲，<img> 标签并不会在网页中插入图像，而是从网页上链接图像。<br><img> 标签创建的是被引用图像的占位空间。<br><img> 标签有两个必需的属性：src 属性 和 alt 属性。</p>
+<p>属性    值    描述<br>alt    text    规定图像的替代文本。<br>src    URL    规定显示图像的 URL。<br>markdown对应标记<br>markdown插入图片与插入连接的语法很像，区别在一个!号。<br>markdown采用<img src alt>)来插入图片，中括号内是图片替代的文字，小括号内是图片地址：<img src="/16/htmlVSmarkdown/src" alt="alt">。</p>
+<p>示例</p>
+<p>4 HTML 标题：</p><h1> - <h6><br>定义和用法<br>标题（Heading）是通过 <h1> - <h6> 标签进行定义的。</h6></h1></h6></h1></pre></table></div></p>
+<h1> 定义最大的标题，<h6> 定义最小的标题。
+因为用户可以通过标题来快速浏览您的网页，所以用标题来呈现文档结构是很重要的，搜索引擎则使用标题为您的网页的结构和内容编制索引。
+一般论文或博客文档结构到3级即可，可参考《毕业论文的国家标准格式与通用格式》、《发表论文通用格式》和《期刊论文格式》。
+
+<p>markdown对应标记<br>markdown一行文字开头以#标记1级标题，以##标记2级标题，...，以######标记6级标题。</p>
+<p>如果一行文字下面一行为三个或以上等号（===），则该行文字升级为1级标题（#）；<br>This is an H1<br>如果一行文字下面一行为三个或以上减号（---），则该行文字升级为2级标题（##）。<br>This is an H2<br>示例<br>以下是典型的HTML body内容文档结构：</p>
+<p>title<br>1<br>1.1<br>1.1.1<br>（1）<br>（2）<br>*<br>1.1.2<br>（1）<br>（2）<br>*<br>2<br>2.1<br>2.1.1<br>（1）<br>*<br>5 HTML 文字格式<br>5.1 强调文本：<em>...</em><br>This text is emphasized</p>
+<p>斜体：<i><br>定义和用法<br><i> 标签显示斜体文本效果。<br><i> 标签和基于内容的样式标签 <em> 类似。它告诉浏览器将包含其中的文本以斜体字（italic）或者倾斜（oblique）字体显示。如果这种斜体字对该浏览器不可用的话，可以使用高亮、反白或加下划线等样式。<br>示例<br>This text is italic<br>markdown对应标记<br>markdown中采用星号（*）或下划线（_）对包围的文字进行斜体化。<br>This text is italic<br>5.2 重要文本：<strong>...</strong><br>This text is strong</em></i></i></i></p>
+<p>粗体：<b><br>定义和用法<br><b> 标签规定粗体文本。<br>示例<br>This text is bold<br>markdown对应标记<br>markdown中采用双星号（**）或双下划线（__）对包围的文字进行粗体化。<br>This text is bold<br>使用<b><i>嵌套（对应markdown三星号包围）可设置粗斜体：<br>This text is italic bold<br>5.3 突出显示文本：<mark>...</mark><br>This text is mark</i></b></b></b></p>
+<p>5.4 改变字号<br>5.4.1 加大字号：<big>...</big><br>定义和用法<br><big> 标签呈现大<big>号字体效果，使用 <big> 标签可以很容易地放大字体。<br>浏览器显示包含在 <big> 标签和其相应的 </big> 标签之间的文字时，其字体比周围的文字要大一号。但是，如果文字已经是最大号字体，这个 <big> 标签将不起任何作用。<br>更妙的是，可以嵌套 <big> 标签来放大文本。每一个 <big> 标签都可以使字体大一号，直到上限 7 号文本。</big></big></big></big></big></big></p>
+<p>示例<br>This text is normal.<br>This text is big.<br>This text is normal.</p>
+<p>5.4.2 减小字号：<small>...</small><br>定义和用法<br><small> 标签呈现小号字体效果。<small> 标签和它所对应的 <big> 标签一样，但它是缩小字体而不是放大。<br>如果被包围的字体已经是字体模型所支持的最小字号，那么 <small> 标签将不起任何作用。<br>与 <big> 标签类似，<small> 标签也可以嵌套，从而连续地把文字缩小。每个 <small> 标签都把文本的字体变小一号，直到达到下限的一号字。</small></small></big></small></big></small></small></p>
+<p>示例<br>This text is normal.<br>This text is small.<br>This text is normal.</p>
+<p>5.5 脚标<br>5.5.1 上脚标：<sup>...</sup><br>指数幂示例：<br>20=1;<br>21=2;<br>22=4;<br>...</p>
+<p>5.5.2 下脚标：<sub>...</sub><br>分步计数原理公式：<br>N=m1 x m1 x m1 x ... x mn</p>
+<p>5.6 下划线：<u>...</u><br>定义和用法<br><u> 标签可定义下划线文本。</u></p>
+<p>HTML 与 XHTML 之间的差异<br>在 HTML 4.01 中，u 元素是不被推荐使用的。<br>在 XHTML 1.0 Strict DTD 中，u 元素是不被支持的。<br>提示和注释：<br>注释：请尽量避免为文本加下划线 - 用户会把它混淆为一个超链接！<br>示例<br>This text is underline.</p>
+<p>5.7 删除线：<del>...</del><br>定义和用法<br>定义文档中已被删除的文本。</p>
+<p>提示和注释：注释：请与 <ins> 标签配合使用，来描述文档中的更新和修正。<br>示例</ins></p>
+<p>一打有 二十 十二 件。</p>
+<p>6 HTML 排版控制<br>6.1 HTML 水平线：<hr><br>定义和用法</p>
+<hr> 标签在 HTML 页面中创建用于分隔内容的水平线，无需闭合。
+
+<p>示例</p>
+<p>HTML: 这段文字上下各有一条水平线（<hr>）分割。<br>markdown对应标记<br>markdown行若只有三个连续的星号（***）或下划线（___）则表示横线。</p>
+<p>markdown: 这段文字上下各有一条水平线分割（上行***/下行___）。</p>
+<p>注意<br>markdown中三个连续减号（---）上面一行如果是空行，则也绘制分割线；如果上面一行有文字，则上面一行升级为2级标题（##）。</p>
+<p>6.2 HTML 换行：<br><br>定义和用法<br><br> 可插入一个简单的换行符。<br>标签是空标签，意味着它没有结束标签，因此这是错误的：<br><br>。<br>在 XHTML 中，把结束标签放在开始标签中，也就是 <br>。<br>请注意，<br> 标签只是简单地开始新的一行，而当浏览器遇到</p>
+<p>标签时，通常会在相邻的段落之间插入一些垂直的间距。</p>
+<p>markdown对应标记<br>markdown在文字末尾连续输入两个空格即可换行，否则默认和下一行连在一起。</p>
+<p>示例</p>
+<p>这是第一行.<br>这是第二行.<br>这是第三行.</p>
+<p>6.3 HTML 段落：</p><p>...</p><br>定义和用法<p></p>
+<p>标签定义段落。<br>p 元素会自动在其前后创建一些空白。浏览器会自动添加这些空间，您也可以在样式表中规定。</p>
+<p>示例</p>
+<p>我胯下的白马疾如闪电，那是远古的旷野。</p>
+<p>我从你的眼前掠过，甚至你看不清我的容颜。<br>只有我背上银色的剑鞘，在阳光下瞬间闪耀的光芒。</p>
+<p>我一定要在黄昏之前到达，我要看看你，我的爱人。<br>在夕阳里娇艳的容颜，和风铃响起时迎风曼舞的衣裙。</p>
+<p>6.4 HTML 分区/节：<div>...</div><br>定义和用法</p>
+<div> 可定义文档中的分区或节（division/section）。<div> 标签可以把文档分割为独立的、不同的部分。它可以用作严格的组织工具，并且不使用任何格式与其关联。
+如果用 id 或 class 来标记 <div>，那么该标签的作用会变得更加有效。
+
+<p>用法</p>
+<div> 是一个块级元素。这意味着它的内容自动地开始一个新行。
+实际上，换行是 <div> 固有的唯一格式表现。可以通过 <div> 的 class 或 id 应用额外的样式。
+
+<p>示例<br>以下示范将三级标题着色为红色，内容段落着色为蓝色：</p>
+<p>3.5.1 红色的标题<br>蓝色的文字</p>
+<p>6.5 HTML 对齐：align属性<br>定义和用法<br>align 属性规定元素（</p><h1> - <h6>、<div>）的水平对齐方式。<p></p>
+<p>浏览器支持<br>尽管不推荐使用 align 属性，但是所有浏览器都支持该属性。<br>兼容性注释<br>在 HTML 4.01 中，不推荐使用 </p><h1> - <h6> 元素的 align 属性；在 XHTML 1.0 Strict DTD 中，不支持 <h1> - <h6> 元素的 align 属性。请使用 CSS 代替。<br>CSS 语法：<h1 style="text-align:right"><br>这段文字居左显示。<br>这段文字居中显示。<br>这段文字居右显示。<br>7 HTML 引用<br>7.1 作品标题：<cite>...</cite><br>定义和用法<br><cite> 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。<br>按照惯例，引用的文本将以斜体显示。<br>用 <cite> 标签把指向其他文档的引用分离出来，尤其是分离那些传统媒体中的文档，如书籍、杂志、期刊，等等。如果引用的这些文档有联机版本，还应该把引用包括在一个 <a> 标签中，从而把一个超链接指向该联机版本。<p></p>
+<p>示例</p>
+<p>《富春山居图》由黄公望始画于至正七年(1347)，于至正十年完成。</p>
+<p>7.2 短引用：<q>...</q><br>定义和用法<br><q> 标签定义不需要段落分隔的短引用（行内引用）。<br>浏览器经常在引用的内容周围添加引号。</q></p>
+<p>示例<br>毛泽东说过：帝国主义都是纸老虎 ...</p>
+<p>cite属性<br>q 元素中的 cite 属性指定了引用的来源，但主流浏览器均不支持 cite 属性，可以当做注释用：</p>
+<p>Here is a quote from WWF's website:</p>
+<p>WWF's ultimate goal is to build a future where people live in harmony with nature.</p>
+<p>We hope that they succeed.</p>
+<p>7.3 块引用：<blockquote>...</blockquote><br>定义和用法</p>
+<blockquote> 标签定义摘自另一个源的块引用。<blockquote> 与 </blockquote> 之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进，而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+<p>示例</p>
+<p>爱上一个人<br>恋上一座城<br>cite属性<br>同 q 元素中的 cite 属性。</p>
+<p>markdown对应标记<br>markdown中以>开始的文字为块引用：</p>
+<p>//<br>// main.m<br>// HelloWorld<br>//<br>// Created by faner on 15/8/30.<br>// Copyright © 2015年 faner. All rights reserved.<br>//</p>
+<p>#import</p>
+<p>int main(int argc, const char * argv[]) {<br>@autoreleasepool {<br>// insert code here...<br>NSLog(@"Hello, World!");<br>}<br>return 0;<br>}</p>
+<p>注意：</p>
+<p>每行后面需要添加两个空格断行。<br>#号前面要加\转义。<br>直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般不建议使用blockquote（>）标签来引用源代码。<br>引用标记可以嵌套使用：</p>
+<p>梦</p>
+<p>梦中梦</p>
+<p>盗梦空间</p>
+<p><q> 与 <blockquote> 的区别<br><q> 标签在本质上与 <blockquote> 是一样的。不同之处在于它们的显示和应用。<q> 标签用于简短的行内引用。如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用 <blockquote> 标签。</blockquote></q></blockquote></q></blockquote></q></p>
+<p>7.4 代码块<br>以下是w3school中给出的“计算机输出”标签示例：</p>
+<p>Computer code<br>Keyboard input<br>Teletype text<br>Sample text<br>Computer variable</p>
+<p>注释：这些标签常用于显示计算机/编程代码。</p>
+<p>7.4.1 代码块：<code>...</code><br>定义和用法<br><code> 标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。<br>如果只是希望使用等宽字体的效果，请使用 <tt> 标签。<br>或者，如果想要在严格限制为等宽字体格式的文本中显示编程代码，请使用 <pre> 标签。</pre></tt></code></p>
+<p>markdown对应标记<br>markdown对应<code>...</code>。</p>
+<p>示例<br>心若没有栖息的地方<br>到哪里都是流浪</p>
+<p>//<br>// main.m<br>// HelloWorld<br>//<br>// Created by faner on 15/8/30.<br>// Copyright © 2015年 faner. All rights reserved.<br>//</p>
+<p>#import <Foundation foundation.h></Foundation></p>
+<p>int main(int argc, const char * argv[]) {<br>@autoreleasepool {<br>// insert code here...<br>NSLog(@"Hello, World!");<br>}<br>return 0;<br>}</p>
+<p>注意：</p>
+<p>每行后面需要添加两个空格断行。<br>#号前面要加\转义；头文件包含的尖括号也需要加\转义。<br>markdown的<code>...</code>中间的两个空格断行无效：<br>心若没有栖息的地方 到哪里都是流浪<br>直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般也不建议使用code（``）标签来引用源代码。<br>7.4.2 代码块：<pre>...</pre><br>定义和用法<br>pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。</p>
+<pre> 标签的一个常见应用就是用来表示计算机的源代码。
+可以导致段落断开的标签（例如标题、<p> 和 <address> 标签）绝不能包含在 <pre> 所定义的块里。
+pre 元素中允许的文本可以包括物理样式和基于内容的样式变化，还有链接、图像和水平分隔线。当把其他标签（比如 <a> 标签）放到 <pre> 块中时，就像放在 HTML/XHTML 文档的其他部分中一样即可。
+
+提示和注释
+提示：制表符（tab）在 <pre> 标签定义的块当中可以起到应有的作用，每个制表符占据 8 个字符的位置。但是我们不推荐使用它，因为在不同的浏览器中，Tab 的实现各不相同。在用 <pre> 标签格式化的文档段中使用空格，可以确保文本正确的水平位置。
+提示：如果您希望使用 <pre> 标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符，比如 "<" 代表 "<"，">" 代表 ">"，"&" 代表 "&"。
+提示：在 W3School 中，非常多页面中的源代码实例都是通过 <pre> 标签定义的。
+
+markdown对应标记
+markdown行首输入四个连续空格即可实现<pre>对应的效果。
+
+markdown行首输入四个空格的效果：
+
+那一年 你正年轻
+总觉得明天肯定会很美
+以下是使用<pre>...</pre>引用代码块的示例：
+
+<p>//<br>//  main.m<br>//  EmptyApplication<br>//<br>//  Created by faner on 15/9/5.<br>//  Copyright © 2015年 faner. All rights reserved.<br>//</p>
+<p>#import<br>#import “AppDelegate.h”</p>
+<p>int main(int argc, char * argv[]) {<br>    @autoreleasepool {<br>        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));<br>    }<br>}<br>以上将Xcode中的main.m代码直接拷到标签中，保持了原有的段落和缩进格式。<br>如果要对代码进行语法着色，可采用在线SyntaxHighlighter插件，输入源程序代码，输出指定语言的着色 HTML 代码。<br>Online syntax highlighter like TextMate<br>Online syntax highlighting for the masses!</p>
+<p>The End<br>————————————————<br>版权声明：本文为CSDN博主「弦苦」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/phunxm/article/details/48575817" target="_blank" rel="noopener">https://blog.csdn.net/phunxm/article/details/48575817</a></p>
+</pre></pre></"></pre></pre></pre></pre></a></pre></address></p></pre></blockquote></a></cite></cite></h1></h6></h1></h6></h1></div></h6></h1></div></div></div></div></div></div></h6></h1>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/11/16/BTree/" rel="next" title="B+索引树">
+                  <i class="fa fa-chevron-left"></i> B+索引树
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text"> - 定义和用法标题（Heading）是通过  -  标签进行定义的。</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#null"><span class="nav-number">1.0.0.0.0.1.</span> <span class="nav-text">定义和用法标题（Heading）是通过  -  标签进行定义的。</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text"> -  标签进行定义的。</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#null"><span class="nav-number">2.0.0.0.0.1.</span> <span class="nav-text"> 标签进行定义的。</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text"> 定义最大的标题， 定义最小的标题。
+因为用户可以通过标题来快速浏览您的网页，所以用标题来呈现文档结构是很重要的，搜索引擎则使用标题为您的网页的结构和内容编制索引。
+一般论文或博客文档结构到3级即可，可参考《毕业论文的国家标准格式与通用格式》、《发表论文通用格式》和《期刊论文格式》。
+
+markdown对应标记markdown一行文字开头以#标记1级标题，以##标记2级标题，...，以######标记6级标题。
+如果一行文字下面一行为三个或以上等号（===），则该行文字升级为1级标题（#）；This is an H1如果一行文字下面一行为三个或以上减号（---），则该行文字升级为2级标题（##）。This is an H2示例以下是典型的HTML body内容文档结构：
+title11.11.1.1（1）（2）*1.1.2（1）（2）*22.12.1.1（1）*5 HTML 文字格式5.1 强调文本：...This text is emphasized
+斜体：定义和用法 标签显示斜体文本效果。 标签和基于内容的样式标签  类似。它告诉浏览器将包含其中的文本以斜体字（italic）或者倾斜（oblique）字体显示。如果这种斜体字对该浏览器不可用的话，可以使用高亮、反白或加下划线等样式。示例This text is italicmarkdown对应标记markdown中采用星号（*）或下划线（_）对包围的文字进行斜体化。This text is italic5.2 重要文本：...This text is strong
+粗体：定义和用法 标签规定粗体文本。示例This text is boldmarkdown对应标记markdown中采用双星号（**）或双下划线（__）对包围的文字进行粗体化。This text is bold使用嵌套（对应markdown三星号包围）可设置粗斜体：This text is italic bold5.3 突出显示文本：...This text is mark
+5.4 改变字号5.4.1 加大字号：...定义和用法 标签呈现大号字体效果，使用  标签可以很容易地放大字体。浏览器显示包含在  标签和其相应的  标签之间的文字时，其字体比周围的文字要大一号。但是，如果文字已经是最大号字体，这个  标签将不起任何作用。更妙的是，可以嵌套  标签来放大文本。每一个  标签都可以使字体大一号，直到上限 7 号文本。
+示例This text is normal.This text is big.This text is normal.
+5.4.2 减小字号：...定义和用法 标签呈现小号字体效果。 标签和它所对应的  标签一样，但它是缩小字体而不是放大。如果被包围的字体已经是字体模型所支持的最小字号，那么  标签将不起任何作用。与  标签类似， 标签也可以嵌套，从而连续地把文字缩小。每个  标签都把文本的字体变小一号，直到达到下限的一号字。
+示例This text is normal.This text is small.This text is normal.
+5.5 脚标5.5.1 上脚标：...指数幂示例：20=1;21=2;22=4;...
+5.5.2 下脚标：...分步计数原理公式：N=m1 x m1 x m1 x ... x mn
+5.6 下划线：...定义和用法 标签可定义下划线文本。
+HTML 与 XHTML 之间的差异在 HTML 4.01 中，u 元素是不被推荐使用的。在 XHTML 1.0 Strict DTD 中，u 元素是不被支持的。提示和注释：注释：请尽量避免为文本加下划线 - 用户会把它混淆为一个超链接！示例This text is underline.
+5.7 删除线：...定义和用法定义文档中已被删除的文本。
+提示和注释：注释：请与  标签配合使用，来描述文档中的更新和修正。示例
+一打有 二十 十二 件。
+6 HTML 排版控制6.1 HTML 水平线：定义和用法
+ 标签在 HTML 页面中创建用于分隔内容的水平线，无需闭合。
+
+示例
+HTML: 这段文字上下各有一条水平线（）分割。markdown对应标记markdown行若只有三个连续的星号（***）或下划线（___）则表示横线。
+markdown: 这段文字上下各有一条水平线分割（上行***/下行___）。
+注意markdown中三个连续减号（---）上面一行如果是空行，则也绘制分割线；如果上面一行有文字，则上面一行升级为2级标题（##）。
+6.2 HTML 换行：定义和用法 可插入一个简单的换行符。标签是空标签，意味着它没有结束标签，因此这是错误的：。在 XHTML 中，把结束标签放在开始标签中，也就是 。请注意， 标签只是简单地开始新的一行，而当浏览器遇到
+标签时，通常会在相邻的段落之间插入一些垂直的间距。
+markdown对应标记markdown在文字末尾连续输入两个空格即可换行，否则默认和下一行连在一起。
+示例
+这是第一行.这是第二行.这是第三行.
+6.3 HTML 段落：...定义和用法
+标签定义段落。p 元素会自动在其前后创建一些空白。浏览器会自动添加这些空间，您也可以在样式表中规定。
+示例
+我胯下的白马疾如闪电，那是远古的旷野。
+我从你的眼前掠过，甚至你看不清我的容颜。只有我背上银色的剑鞘，在阳光下瞬间闪耀的光芒。
+我一定要在黄昏之前到达，我要看看你，我的爱人。在夕阳里娇艳的容颜，和风铃响起时迎风曼舞的衣裙。
+6.4 HTML 分区/节：...定义和用法
+ 可定义文档中的分区或节（division/section）。 标签可以把文档分割为独立的、不同的部分。它可以用作严格的组织工具，并且不使用任何格式与其关联。
+如果用 id 或 class 来标记 ，那么该标签的作用会变得更加有效。
+
+用法
+ 是一个块级元素。这意味着它的内容自动地开始一个新行。
+实际上，换行是  固有的唯一格式表现。可以通过  的 class 或 id 应用额外的样式。
+
+示例以下示范将三级标题着色为红色，内容段落着色为蓝色：
+3.5.1 红色的标题蓝色的文字
+6.5 HTML 对齐：align属性定义和用法align 属性规定元素（ - 、）的水平对齐方式。
+浏览器支持尽管不推荐使用 align 属性，但是所有浏览器都支持该属性。兼容性注释在 HTML 4.01 中，不推荐使用  -  元素的 align 属性；在 XHTML 1.0 Strict DTD 中，不支持  -  元素的 align 属性。请使用 CSS 代替。CSS 语法：这段文字居左显示。这段文字居中显示。这段文字居右显示。7 HTML 引用7.1 作品标题：...定义和用法 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。按照惯例，引用的文本将以斜体显示。用  标签把指向其他文档的引用分离出来，尤其是分离那些传统媒体中的文档，如书籍、杂志、期刊，等等。如果引用的这些文档有联机版本，还应该把引用包括在一个  标签中，从而把一个超链接指向该联机版本。
+示例
+《富春山居图》由黄公望始画于至正七年(1347)，于至正十年完成。
+7.2 短引用：...定义和用法 标签定义不需要段落分隔的短引用（行内引用）。浏览器经常在引用的内容周围添加引号。
+示例毛泽东说过：帝国主义都是纸老虎 ...
+cite属性q 元素中的 cite 属性指定了引用的来源，但主流浏览器均不支持 cite 属性，可以当做注释用：
+Here is a quote from WWF&#39;s website:
+WWF&#39;s ultimate goal is to build a future where people live in harmony with nature.
+We hope that they succeed.
+7.3 块引用：...定义和用法
+ 标签定义摘自另一个源的块引用。 与  之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进，而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+示例
+爱上一个人恋上一座城cite属性同 q 元素中的 cite 属性。
+markdown对应标记markdown中以&gt;开始的文字为块引用：
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义。直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般不建议使用blockquote（&gt;）标签来引用源代码。引用标记可以嵌套使用：
+梦
+梦中梦
+盗梦空间
+ 与  的区别 标签在本质上与  是一样的。不同之处在于它们的显示和应用。 标签用于简短的行内引用。如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用  标签。
+7.4 代码块以下是w3school中给出的“计算机输出”标签示例：
+Computer codeKeyboard inputTeletype textSample textComputer variable
+注释：这些标签常用于显示计算机/编程代码。
+7.4.1 代码块：...定义和用法 标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。如果只是希望使用等宽字体的效果，请使用  标签。或者，如果想要在严格限制为等宽字体格式的文本中显示编程代码，请使用  标签。
+markdown对应标记markdown对应...。
+示例心若没有栖息的地方到哪里都是流浪
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import 
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义；头文件包含的尖括号也需要加\转义。markdown的...中间的两个空格断行无效：心若没有栖息的地方 到哪里都是流浪直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般也不建议使用code（``）标签来引用源代码。7.4.2 代码块：...定义和用法pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+ 标签的一个常见应用就是用来表示计算机的源代码。
+可以导致段落断开的标签（例如标题、 和  标签）绝不能包含在  所定义的块里。
+pre 元素中允许的文本可以包括物理样式和基于内容的样式变化，还有链接、图像和水平分隔线。当把其他标签（比如  标签）放到  块中时，就像放在 HTML/XHTML 文档的其他部分中一样即可。
+
+提示和注释
+提示：制表符（tab）在  标签定义的块当中可以起到应有的作用，每个制表符占据 8 个字符的位置。但是我们不推荐使用它，因为在不同的浏览器中，Tab 的实现各不相同。在用  标签格式化的文档段中使用空格，可以确保文本正确的水平位置。
+提示：如果您希望使用  标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符，比如 &quot;&quot; 代表 &quot;&gt;&quot;，&quot;&amp;&quot; 代表 &quot;&amp;&quot;。
+提示：在 W3School 中，非常多页面中的源代码实例都是通过  标签定义的。
+
+markdown对应标记
+markdown行首输入四个连续空格即可实现对应的效果。
+
+markdown行首输入四个空格的效果：
+
+那一年 你正年轻
+总觉得明天肯定会很美
+以下是使用...引用代码块的示例：
+
+////  main.m//  EmptyApplication////  Created by faner on 15/9/5.//  Copyright © 2015年 faner. All rights reserved.//
+#import#import “AppDelegate.h”
+int main(int argc, char * argv[]) {    @autoreleasepool {        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));    }}以上将Xcode中的main.m代码直接拷到标签中，保持了原有的段落和缩进格式。如果要对代码进行语法着色，可采用在线SyntaxHighlighter插件，输入源程序代码，输出指定语言的着色 HTML 代码。Online syntax highlighter like TextMateOnline syntax highlighting for the masses!
+The End————————————————版权声明：本文为CSDN博主「弦苦」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。原文链接：https://blog.csdn.net/phunxm/article/details/48575817
+</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#null"><span class="nav-number">3.0.0.0.0.1.</span> <span class="nav-text"> 定义最小的标题。
+因为用户可以通过标题来快速浏览您的网页，所以用标题来呈现文档结构是很重要的，搜索引擎则使用标题为您的网页的结构和内容编制索引。
+一般论文或博客文档结构到3级即可，可参考《毕业论文的国家标准格式与通用格式》、《发表论文通用格式》和《期刊论文格式》。
+
+markdown对应标记markdown一行文字开头以#标记1级标题，以##标记2级标题，...，以######标记6级标题。
+如果一行文字下面一行为三个或以上等号（===），则该行文字升级为1级标题（#）；This is an H1如果一行文字下面一行为三个或以上减号（---），则该行文字升级为2级标题（##）。This is an H2示例以下是典型的HTML body内容文档结构：
+title11.11.1.1（1）（2）*1.1.2（1）（2）*22.12.1.1（1）*5 HTML 文字格式5.1 强调文本：...This text is emphasized
+斜体：定义和用法 标签显示斜体文本效果。 标签和基于内容的样式标签  类似。它告诉浏览器将包含其中的文本以斜体字（italic）或者倾斜（oblique）字体显示。如果这种斜体字对该浏览器不可用的话，可以使用高亮、反白或加下划线等样式。示例This text is italicmarkdown对应标记markdown中采用星号（*）或下划线（_）对包围的文字进行斜体化。This text is italic5.2 重要文本：...This text is strong
+粗体：定义和用法 标签规定粗体文本。示例This text is boldmarkdown对应标记markdown中采用双星号（**）或双下划线（__）对包围的文字进行粗体化。This text is bold使用嵌套（对应markdown三星号包围）可设置粗斜体：This text is italic bold5.3 突出显示文本：...This text is mark
+5.4 改变字号5.4.1 加大字号：...定义和用法 标签呈现大号字体效果，使用  标签可以很容易地放大字体。浏览器显示包含在  标签和其相应的  标签之间的文字时，其字体比周围的文字要大一号。但是，如果文字已经是最大号字体，这个  标签将不起任何作用。更妙的是，可以嵌套  标签来放大文本。每一个  标签都可以使字体大一号，直到上限 7 号文本。
+示例This text is normal.This text is big.This text is normal.
+5.4.2 减小字号：...定义和用法 标签呈现小号字体效果。 标签和它所对应的  标签一样，但它是缩小字体而不是放大。如果被包围的字体已经是字体模型所支持的最小字号，那么  标签将不起任何作用。与  标签类似， 标签也可以嵌套，从而连续地把文字缩小。每个  标签都把文本的字体变小一号，直到达到下限的一号字。
+示例This text is normal.This text is small.This text is normal.
+5.5 脚标5.5.1 上脚标：...指数幂示例：20=1;21=2;22=4;...
+5.5.2 下脚标：...分步计数原理公式：N=m1 x m1 x m1 x ... x mn
+5.6 下划线：...定义和用法 标签可定义下划线文本。
+HTML 与 XHTML 之间的差异在 HTML 4.01 中，u 元素是不被推荐使用的。在 XHTML 1.0 Strict DTD 中，u 元素是不被支持的。提示和注释：注释：请尽量避免为文本加下划线 - 用户会把它混淆为一个超链接！示例This text is underline.
+5.7 删除线：...定义和用法定义文档中已被删除的文本。
+提示和注释：注释：请与  标签配合使用，来描述文档中的更新和修正。示例
+一打有 二十 十二 件。
+6 HTML 排版控制6.1 HTML 水平线：定义和用法
+ 标签在 HTML 页面中创建用于分隔内容的水平线，无需闭合。
+
+示例
+HTML: 这段文字上下各有一条水平线（）分割。markdown对应标记markdown行若只有三个连续的星号（***）或下划线（___）则表示横线。
+markdown: 这段文字上下各有一条水平线分割（上行***/下行___）。
+注意markdown中三个连续减号（---）上面一行如果是空行，则也绘制分割线；如果上面一行有文字，则上面一行升级为2级标题（##）。
+6.2 HTML 换行：定义和用法 可插入一个简单的换行符。标签是空标签，意味着它没有结束标签，因此这是错误的：。在 XHTML 中，把结束标签放在开始标签中，也就是 。请注意， 标签只是简单地开始新的一行，而当浏览器遇到
+标签时，通常会在相邻的段落之间插入一些垂直的间距。
+markdown对应标记markdown在文字末尾连续输入两个空格即可换行，否则默认和下一行连在一起。
+示例
+这是第一行.这是第二行.这是第三行.
+6.3 HTML 段落：...定义和用法
+标签定义段落。p 元素会自动在其前后创建一些空白。浏览器会自动添加这些空间，您也可以在样式表中规定。
+示例
+我胯下的白马疾如闪电，那是远古的旷野。
+我从你的眼前掠过，甚至你看不清我的容颜。只有我背上银色的剑鞘，在阳光下瞬间闪耀的光芒。
+我一定要在黄昏之前到达，我要看看你，我的爱人。在夕阳里娇艳的容颜，和风铃响起时迎风曼舞的衣裙。
+6.4 HTML 分区/节：...定义和用法
+ 可定义文档中的分区或节（division/section）。 标签可以把文档分割为独立的、不同的部分。它可以用作严格的组织工具，并且不使用任何格式与其关联。
+如果用 id 或 class 来标记 ，那么该标签的作用会变得更加有效。
+
+用法
+ 是一个块级元素。这意味着它的内容自动地开始一个新行。
+实际上，换行是  固有的唯一格式表现。可以通过  的 class 或 id 应用额外的样式。
+
+示例以下示范将三级标题着色为红色，内容段落着色为蓝色：
+3.5.1 红色的标题蓝色的文字
+6.5 HTML 对齐：align属性定义和用法align 属性规定元素（ - 、）的水平对齐方式。
+浏览器支持尽管不推荐使用 align 属性，但是所有浏览器都支持该属性。兼容性注释在 HTML 4.01 中，不推荐使用  -  元素的 align 属性；在 XHTML 1.0 Strict DTD 中，不支持  -  元素的 align 属性。请使用 CSS 代替。CSS 语法：这段文字居左显示。这段文字居中显示。这段文字居右显示。7 HTML 引用7.1 作品标题：...定义和用法 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。按照惯例，引用的文本将以斜体显示。用  标签把指向其他文档的引用分离出来，尤其是分离那些传统媒体中的文档，如书籍、杂志、期刊，等等。如果引用的这些文档有联机版本，还应该把引用包括在一个  标签中，从而把一个超链接指向该联机版本。
+示例
+《富春山居图》由黄公望始画于至正七年(1347)，于至正十年完成。
+7.2 短引用：...定义和用法 标签定义不需要段落分隔的短引用（行内引用）。浏览器经常在引用的内容周围添加引号。
+示例毛泽东说过：帝国主义都是纸老虎 ...
+cite属性q 元素中的 cite 属性指定了引用的来源，但主流浏览器均不支持 cite 属性，可以当做注释用：
+Here is a quote from WWF&#39;s website:
+WWF&#39;s ultimate goal is to build a future where people live in harmony with nature.
+We hope that they succeed.
+7.3 块引用：...定义和用法
+ 标签定义摘自另一个源的块引用。 与  之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进，而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+示例
+爱上一个人恋上一座城cite属性同 q 元素中的 cite 属性。
+markdown对应标记markdown中以&gt;开始的文字为块引用：
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义。直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般不建议使用blockquote（&gt;）标签来引用源代码。引用标记可以嵌套使用：
+梦
+梦中梦
+盗梦空间
+ 与  的区别 标签在本质上与  是一样的。不同之处在于它们的显示和应用。 标签用于简短的行内引用。如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用  标签。
+7.4 代码块以下是w3school中给出的“计算机输出”标签示例：
+Computer codeKeyboard inputTeletype textSample textComputer variable
+注释：这些标签常用于显示计算机/编程代码。
+7.4.1 代码块：...定义和用法 标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。如果只是希望使用等宽字体的效果，请使用  标签。或者，如果想要在严格限制为等宽字体格式的文本中显示编程代码，请使用  标签。
+markdown对应标记markdown对应...。
+示例心若没有栖息的地方到哪里都是流浪
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import 
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义；头文件包含的尖括号也需要加\转义。markdown的...中间的两个空格断行无效：心若没有栖息的地方 到哪里都是流浪直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般也不建议使用code（``）标签来引用源代码。7.4.2 代码块：...定义和用法pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+ 标签的一个常见应用就是用来表示计算机的源代码。
+可以导致段落断开的标签（例如标题、 和  标签）绝不能包含在  所定义的块里。
+pre 元素中允许的文本可以包括物理样式和基于内容的样式变化，还有链接、图像和水平分隔线。当把其他标签（比如  标签）放到  块中时，就像放在 HTML/XHTML 文档的其他部分中一样即可。
+
+提示和注释
+提示：制表符（tab）在  标签定义的块当中可以起到应有的作用，每个制表符占据 8 个字符的位置。但是我们不推荐使用它，因为在不同的浏览器中，Tab 的实现各不相同。在用  标签格式化的文档段中使用空格，可以确保文本正确的水平位置。
+提示：如果您希望使用  标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符，比如 &quot;&quot; 代表 &quot;&gt;&quot;，&quot;&amp;&quot; 代表 &quot;&amp;&quot;。
+提示：在 W3School 中，非常多页面中的源代码实例都是通过  标签定义的。
+
+markdown对应标记
+markdown行首输入四个连续空格即可实现对应的效果。
+
+markdown行首输入四个空格的效果：
+
+那一年 你正年轻
+总觉得明天肯定会很美
+以下是使用...引用代码块的示例：
+
+////  main.m//  EmptyApplication////  Created by faner on 15/9/5.//  Copyright © 2015年 faner. All rights reserved.//
+#import#import “AppDelegate.h”
+int main(int argc, char * argv[]) {    @autoreleasepool {        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));    }}以上将Xcode中的main.m代码直接拷到标签中，保持了原有的段落和缩进格式。如果要对代码进行语法着色，可采用在线SyntaxHighlighter插件，输入源程序代码，输出指定语言的着色 HTML 代码。Online syntax highlighter like TextMateOnline syntax highlighting for the masses!
+The End————————————————版权声明：本文为CSDN博主「弦苦」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。原文链接：https://blog.csdn.net/phunxm/article/details/48575817
+</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text"> - 、）的水平对齐方式。
+浏览器支持尽管不推荐使用 align 属性，但是所有浏览器都支持该属性。兼容性注释在 HTML 4.01 中，不推荐使用  -  元素的 align 属性；在 XHTML 1.0 Strict DTD 中，不支持  -  元素的 align 属性。请使用 CSS 代替。CSS 语法：这段文字居左显示。这段文字居中显示。这段文字居右显示。7 HTML 引用7.1 作品标题：...定义和用法 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。按照惯例，引用的文本将以斜体显示。用  标签把指向其他文档的引用分离出来，尤其是分离那些传统媒体中的文档，如书籍、杂志、期刊，等等。如果引用的这些文档有联机版本，还应该把引用包括在一个  标签中，从而把一个超链接指向该联机版本。
+示例
+《富春山居图》由黄公望始画于至正七年(1347)，于至正十年完成。
+7.2 短引用：...定义和用法 标签定义不需要段落分隔的短引用（行内引用）。浏览器经常在引用的内容周围添加引号。
+示例毛泽东说过：帝国主义都是纸老虎 ...
+cite属性q 元素中的 cite 属性指定了引用的来源，但主流浏览器均不支持 cite 属性，可以当做注释用：
+Here is a quote from WWF&#39;s website:
+WWF&#39;s ultimate goal is to build a future where people live in harmony with nature.
+We hope that they succeed.
+7.3 块引用：...定义和用法
+ 标签定义摘自另一个源的块引用。 与  之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进，而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+示例
+爱上一个人恋上一座城cite属性同 q 元素中的 cite 属性。
+markdown对应标记markdown中以&gt;开始的文字为块引用：
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义。直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般不建议使用blockquote（&gt;）标签来引用源代码。引用标记可以嵌套使用：
+梦
+梦中梦
+盗梦空间
+ 与  的区别 标签在本质上与  是一样的。不同之处在于它们的显示和应用。 标签用于简短的行内引用。如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用  标签。
+7.4 代码块以下是w3school中给出的“计算机输出”标签示例：
+Computer codeKeyboard inputTeletype textSample textComputer variable
+注释：这些标签常用于显示计算机/编程代码。
+7.4.1 代码块：...定义和用法 标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。如果只是希望使用等宽字体的效果，请使用  标签。或者，如果想要在严格限制为等宽字体格式的文本中显示编程代码，请使用  标签。
+markdown对应标记markdown对应...。
+示例心若没有栖息的地方到哪里都是流浪
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import 
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义；头文件包含的尖括号也需要加\转义。markdown的...中间的两个空格断行无效：心若没有栖息的地方 到哪里都是流浪直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般也不建议使用code（``）标签来引用源代码。7.4.2 代码块：...定义和用法pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+ 标签的一个常见应用就是用来表示计算机的源代码。
+可以导致段落断开的标签（例如标题、 和  标签）绝不能包含在  所定义的块里。
+pre 元素中允许的文本可以包括物理样式和基于内容的样式变化，还有链接、图像和水平分隔线。当把其他标签（比如  标签）放到  块中时，就像放在 HTML/XHTML 文档的其他部分中一样即可。
+
+提示和注释
+提示：制表符（tab）在  标签定义的块当中可以起到应有的作用，每个制表符占据 8 个字符的位置。但是我们不推荐使用它，因为在不同的浏览器中，Tab 的实现各不相同。在用  标签格式化的文档段中使用空格，可以确保文本正确的水平位置。
+提示：如果您希望使用  标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符，比如 &quot;&quot; 代表 &quot;&gt;&quot;，&quot;&amp;&quot; 代表 &quot;&amp;&quot;。
+提示：在 W3School 中，非常多页面中的源代码实例都是通过  标签定义的。
+
+markdown对应标记
+markdown行首输入四个连续空格即可实现对应的效果。
+
+markdown行首输入四个空格的效果：
+
+那一年 你正年轻
+总觉得明天肯定会很美
+以下是使用...引用代码块的示例：
+
+////  main.m//  EmptyApplication////  Created by faner on 15/9/5.//  Copyright © 2015年 faner. All rights reserved.//
+#import#import “AppDelegate.h”
+int main(int argc, char * argv[]) {    @autoreleasepool {        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));    }}以上将Xcode中的main.m代码直接拷到标签中，保持了原有的段落和缩进格式。如果要对代码进行语法着色，可采用在线SyntaxHighlighter插件，输入源程序代码，输出指定语言的着色 HTML 代码。Online syntax highlighter like TextMateOnline syntax highlighting for the masses!
+The End————————————————版权声明：本文为CSDN博主「弦苦」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。原文链接：https://blog.csdn.net/phunxm/article/details/48575817
+</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#null"><span class="nav-number">4.0.0.0.0.1.</span> <span class="nav-text">、）的水平对齐方式。
+浏览器支持尽管不推荐使用 align 属性，但是所有浏览器都支持该属性。兼容性注释在 HTML 4.01 中，不推荐使用  -  元素的 align 属性；在 XHTML 1.0 Strict DTD 中，不支持  -  元素的 align 属性。请使用 CSS 代替。CSS 语法：这段文字居左显示。这段文字居中显示。这段文字居右显示。7 HTML 引用7.1 作品标题：...定义和用法 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。按照惯例，引用的文本将以斜体显示。用  标签把指向其他文档的引用分离出来，尤其是分离那些传统媒体中的文档，如书籍、杂志、期刊，等等。如果引用的这些文档有联机版本，还应该把引用包括在一个  标签中，从而把一个超链接指向该联机版本。
+示例
+《富春山居图》由黄公望始画于至正七年(1347)，于至正十年完成。
+7.2 短引用：...定义和用法 标签定义不需要段落分隔的短引用（行内引用）。浏览器经常在引用的内容周围添加引号。
+示例毛泽东说过：帝国主义都是纸老虎 ...
+cite属性q 元素中的 cite 属性指定了引用的来源，但主流浏览器均不支持 cite 属性，可以当做注释用：
+Here is a quote from WWF&#39;s website:
+WWF&#39;s ultimate goal is to build a future where people live in harmony with nature.
+We hope that they succeed.
+7.3 块引用：...定义和用法
+ 标签定义摘自另一个源的块引用。 与  之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进，而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+示例
+爱上一个人恋上一座城cite属性同 q 元素中的 cite 属性。
+markdown对应标记markdown中以&gt;开始的文字为块引用：
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义。直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般不建议使用blockquote（&gt;）标签来引用源代码。引用标记可以嵌套使用：
+梦
+梦中梦
+盗梦空间
+ 与  的区别 标签在本质上与  是一样的。不同之处在于它们的显示和应用。 标签用于简短的行内引用。如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用  标签。
+7.4 代码块以下是w3school中给出的“计算机输出”标签示例：
+Computer codeKeyboard inputTeletype textSample textComputer variable
+注释：这些标签常用于显示计算机/编程代码。
+7.4.1 代码块：...定义和用法 标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。如果只是希望使用等宽字体的效果，请使用  标签。或者，如果想要在严格限制为等宽字体格式的文本中显示编程代码，请使用  标签。
+markdown对应标记markdown对应...。
+示例心若没有栖息的地方到哪里都是流浪
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import 
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义；头文件包含的尖括号也需要加\转义。markdown的...中间的两个空格断行无效：心若没有栖息的地方 到哪里都是流浪直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般也不建议使用code（``）标签来引用源代码。7.4.2 代码块：...定义和用法pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+ 标签的一个常见应用就是用来表示计算机的源代码。
+可以导致段落断开的标签（例如标题、 和  标签）绝不能包含在  所定义的块里。
+pre 元素中允许的文本可以包括物理样式和基于内容的样式变化，还有链接、图像和水平分隔线。当把其他标签（比如  标签）放到  块中时，就像放在 HTML/XHTML 文档的其他部分中一样即可。
+
+提示和注释
+提示：制表符（tab）在  标签定义的块当中可以起到应有的作用，每个制表符占据 8 个字符的位置。但是我们不推荐使用它，因为在不同的浏览器中，Tab 的实现各不相同。在用  标签格式化的文档段中使用空格，可以确保文本正确的水平位置。
+提示：如果您希望使用  标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符，比如 &quot;&quot; 代表 &quot;&gt;&quot;，&quot;&amp;&quot; 代表 &quot;&amp;&quot;。
+提示：在 W3School 中，非常多页面中的源代码实例都是通过  标签定义的。
+
+markdown对应标记
+markdown行首输入四个连续空格即可实现对应的效果。
+
+markdown行首输入四个空格的效果：
+
+那一年 你正年轻
+总觉得明天肯定会很美
+以下是使用...引用代码块的示例：
+
+////  main.m//  EmptyApplication////  Created by faner on 15/9/5.//  Copyright © 2015年 faner. All rights reserved.//
+#import#import “AppDelegate.h”
+int main(int argc, char * argv[]) {    @autoreleasepool {        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));    }}以上将Xcode中的main.m代码直接拷到标签中，保持了原有的段落和缩进格式。如果要对代码进行语法着色，可采用在线SyntaxHighlighter插件，输入源程序代码，输出指定语言的着色 HTML 代码。Online syntax highlighter like TextMateOnline syntax highlighting for the masses!
+The End————————————————版权声明：本文为CSDN博主「弦苦」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。原文链接：https://blog.csdn.net/phunxm/article/details/48575817
+</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text"> -  元素的 align 属性；在 XHTML 1.0 Strict DTD 中，不支持  -  元素的 align 属性。请使用 CSS 代替。CSS 语法：这段文字居左显示。这段文字居中显示。这段文字居右显示。7 HTML 引用7.1 作品标题：...定义和用法 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。按照惯例，引用的文本将以斜体显示。用  标签把指向其他文档的引用分离出来，尤其是分离那些传统媒体中的文档，如书籍、杂志、期刊，等等。如果引用的这些文档有联机版本，还应该把引用包括在一个  标签中，从而把一个超链接指向该联机版本。
+示例
+《富春山居图》由黄公望始画于至正七年(1347)，于至正十年完成。
+7.2 短引用：...定义和用法 标签定义不需要段落分隔的短引用（行内引用）。浏览器经常在引用的内容周围添加引号。
+示例毛泽东说过：帝国主义都是纸老虎 ...
+cite属性q 元素中的 cite 属性指定了引用的来源，但主流浏览器均不支持 cite 属性，可以当做注释用：
+Here is a quote from WWF&#39;s website:
+WWF&#39;s ultimate goal is to build a future where people live in harmony with nature.
+We hope that they succeed.
+7.3 块引用：...定义和用法
+ 标签定义摘自另一个源的块引用。 与  之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进，而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+示例
+爱上一个人恋上一座城cite属性同 q 元素中的 cite 属性。
+markdown对应标记markdown中以&gt;开始的文字为块引用：
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义。直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般不建议使用blockquote（&gt;）标签来引用源代码。引用标记可以嵌套使用：
+梦
+梦中梦
+盗梦空间
+ 与  的区别 标签在本质上与  是一样的。不同之处在于它们的显示和应用。 标签用于简短的行内引用。如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用  标签。
+7.4 代码块以下是w3school中给出的“计算机输出”标签示例：
+Computer codeKeyboard inputTeletype textSample textComputer variable
+注释：这些标签常用于显示计算机/编程代码。
+7.4.1 代码块：...定义和用法 标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。如果只是希望使用等宽字体的效果，请使用  标签。或者，如果想要在严格限制为等宽字体格式的文本中显示编程代码，请使用  标签。
+markdown对应标记markdown对应...。
+示例心若没有栖息的地方到哪里都是流浪
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import 
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义；头文件包含的尖括号也需要加\转义。markdown的...中间的两个空格断行无效：心若没有栖息的地方 到哪里都是流浪直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般也不建议使用code（``）标签来引用源代码。7.4.2 代码块：...定义和用法pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+ 标签的一个常见应用就是用来表示计算机的源代码。
+可以导致段落断开的标签（例如标题、 和  标签）绝不能包含在  所定义的块里。
+pre 元素中允许的文本可以包括物理样式和基于内容的样式变化，还有链接、图像和水平分隔线。当把其他标签（比如  标签）放到  块中时，就像放在 HTML/XHTML 文档的其他部分中一样即可。
+
+提示和注释
+提示：制表符（tab）在  标签定义的块当中可以起到应有的作用，每个制表符占据 8 个字符的位置。但是我们不推荐使用它，因为在不同的浏览器中，Tab 的实现各不相同。在用  标签格式化的文档段中使用空格，可以确保文本正确的水平位置。
+提示：如果您希望使用  标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符，比如 &quot;&quot; 代表 &quot;&gt;&quot;，&quot;&amp;&quot; 代表 &quot;&amp;&quot;。
+提示：在 W3School 中，非常多页面中的源代码实例都是通过  标签定义的。
+
+markdown对应标记
+markdown行首输入四个连续空格即可实现对应的效果。
+
+markdown行首输入四个空格的效果：
+
+那一年 你正年轻
+总觉得明天肯定会很美
+以下是使用...引用代码块的示例：
+
+////  main.m//  EmptyApplication////  Created by faner on 15/9/5.//  Copyright © 2015年 faner. All rights reserved.//
+#import#import “AppDelegate.h”
+int main(int argc, char * argv[]) {    @autoreleasepool {        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));    }}以上将Xcode中的main.m代码直接拷到标签中，保持了原有的段落和缩进格式。如果要对代码进行语法着色，可采用在线SyntaxHighlighter插件，输入源程序代码，输出指定语言的着色 HTML 代码。Online syntax highlighter like TextMateOnline syntax highlighting for the masses!
+The End————————————————版权声明：本文为CSDN博主「弦苦」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。原文链接：https://blog.csdn.net/phunxm/article/details/48575817
+</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#null"><span class="nav-number">5.0.0.0.0.1.</span> <span class="nav-text"> 元素的 align 属性；在 XHTML 1.0 Strict DTD 中，不支持  -  元素的 align 属性。请使用 CSS 代替。CSS 语法：这段文字居左显示。这段文字居中显示。这段文字居右显示。7 HTML 引用7.1 作品标题：...定义和用法 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。按照惯例，引用的文本将以斜体显示。用  标签把指向其他文档的引用分离出来，尤其是分离那些传统媒体中的文档，如书籍、杂志、期刊，等等。如果引用的这些文档有联机版本，还应该把引用包括在一个  标签中，从而把一个超链接指向该联机版本。
+示例
+《富春山居图》由黄公望始画于至正七年(1347)，于至正十年完成。
+7.2 短引用：...定义和用法 标签定义不需要段落分隔的短引用（行内引用）。浏览器经常在引用的内容周围添加引号。
+示例毛泽东说过：帝国主义都是纸老虎 ...
+cite属性q 元素中的 cite 属性指定了引用的来源，但主流浏览器均不支持 cite 属性，可以当做注释用：
+Here is a quote from WWF&#39;s website:
+WWF&#39;s ultimate goal is to build a future where people live in harmony with nature.
+We hope that they succeed.
+7.3 块引用：...定义和用法
+ 标签定义摘自另一个源的块引用。 与  之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进，而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+示例
+爱上一个人恋上一座城cite属性同 q 元素中的 cite 属性。
+markdown对应标记markdown中以&gt;开始的文字为块引用：
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义。直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般不建议使用blockquote（&gt;）标签来引用源代码。引用标记可以嵌套使用：
+梦
+梦中梦
+盗梦空间
+ 与  的区别 标签在本质上与  是一样的。不同之处在于它们的显示和应用。 标签用于简短的行内引用。如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用  标签。
+7.4 代码块以下是w3school中给出的“计算机输出”标签示例：
+Computer codeKeyboard inputTeletype textSample textComputer variable
+注释：这些标签常用于显示计算机/编程代码。
+7.4.1 代码块：...定义和用法 标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。如果只是希望使用等宽字体的效果，请使用  标签。或者，如果想要在严格限制为等宽字体格式的文本中显示编程代码，请使用  标签。
+markdown对应标记markdown对应...。
+示例心若没有栖息的地方到哪里都是流浪
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import 
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义；头文件包含的尖括号也需要加\转义。markdown的...中间的两个空格断行无效：心若没有栖息的地方 到哪里都是流浪直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般也不建议使用code（``）标签来引用源代码。7.4.2 代码块：...定义和用法pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+ 标签的一个常见应用就是用来表示计算机的源代码。
+可以导致段落断开的标签（例如标题、 和  标签）绝不能包含在  所定义的块里。
+pre 元素中允许的文本可以包括物理样式和基于内容的样式变化，还有链接、图像和水平分隔线。当把其他标签（比如  标签）放到  块中时，就像放在 HTML/XHTML 文档的其他部分中一样即可。
+
+提示和注释
+提示：制表符（tab）在  标签定义的块当中可以起到应有的作用，每个制表符占据 8 个字符的位置。但是我们不推荐使用它，因为在不同的浏览器中，Tab 的实现各不相同。在用  标签格式化的文档段中使用空格，可以确保文本正确的水平位置。
+提示：如果您希望使用  标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符，比如 &quot;&quot; 代表 &quot;&gt;&quot;，&quot;&amp;&quot; 代表 &quot;&amp;&quot;。
+提示：在 W3School 中，非常多页面中的源代码实例都是通过  标签定义的。
+
+markdown对应标记
+markdown行首输入四个连续空格即可实现对应的效果。
+
+markdown行首输入四个空格的效果：
+
+那一年 你正年轻
+总觉得明天肯定会很美
+以下是使用...引用代码块的示例：
+
+////  main.m//  EmptyApplication////  Created by faner on 15/9/5.//  Copyright © 2015年 faner. All rights reserved.//
+#import#import “AppDelegate.h”
+int main(int argc, char * argv[]) {    @autoreleasepool {        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));    }}以上将Xcode中的main.m代码直接拷到标签中，保持了原有的段落和缩进格式。如果要对代码进行语法着色，可采用在线SyntaxHighlighter插件，输入源程序代码，输出指定语言的着色 HTML 代码。Online syntax highlighter like TextMateOnline syntax highlighting for the masses!
+The End————————————————版权声明：本文为CSDN博主「弦苦」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。原文链接：https://blog.csdn.net/phunxm/article/details/48575817
+</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text"> -  元素的 align 属性。请使用 CSS 代替。CSS 语法：这段文字居左显示。这段文字居中显示。这段文字居右显示。7 HTML 引用7.1 作品标题：...定义和用法 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。按照惯例，引用的文本将以斜体显示。用  标签把指向其他文档的引用分离出来，尤其是分离那些传统媒体中的文档，如书籍、杂志、期刊，等等。如果引用的这些文档有联机版本，还应该把引用包括在一个  标签中，从而把一个超链接指向该联机版本。
+示例
+《富春山居图》由黄公望始画于至正七年(1347)，于至正十年完成。
+7.2 短引用：...定义和用法 标签定义不需要段落分隔的短引用（行内引用）。浏览器经常在引用的内容周围添加引号。
+示例毛泽东说过：帝国主义都是纸老虎 ...
+cite属性q 元素中的 cite 属性指定了引用的来源，但主流浏览器均不支持 cite 属性，可以当做注释用：
+Here is a quote from WWF&#39;s website:
+WWF&#39;s ultimate goal is to build a future where people live in harmony with nature.
+We hope that they succeed.
+7.3 块引用：...定义和用法
+ 标签定义摘自另一个源的块引用。 与  之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进，而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+示例
+爱上一个人恋上一座城cite属性同 q 元素中的 cite 属性。
+markdown对应标记markdown中以&gt;开始的文字为块引用：
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义。直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般不建议使用blockquote（&gt;）标签来引用源代码。引用标记可以嵌套使用：
+梦
+梦中梦
+盗梦空间
+ 与  的区别 标签在本质上与  是一样的。不同之处在于它们的显示和应用。 标签用于简短的行内引用。如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用  标签。
+7.4 代码块以下是w3school中给出的“计算机输出”标签示例：
+Computer codeKeyboard inputTeletype textSample textComputer variable
+注释：这些标签常用于显示计算机/编程代码。
+7.4.1 代码块：...定义和用法 标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。如果只是希望使用等宽字体的效果，请使用  标签。或者，如果想要在严格限制为等宽字体格式的文本中显示编程代码，请使用  标签。
+markdown对应标记markdown对应...。
+示例心若没有栖息的地方到哪里都是流浪
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import 
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义；头文件包含的尖括号也需要加\转义。markdown的...中间的两个空格断行无效：心若没有栖息的地方 到哪里都是流浪直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般也不建议使用code（``）标签来引用源代码。7.4.2 代码块：...定义和用法pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+ 标签的一个常见应用就是用来表示计算机的源代码。
+可以导致段落断开的标签（例如标题、 和  标签）绝不能包含在  所定义的块里。
+pre 元素中允许的文本可以包括物理样式和基于内容的样式变化，还有链接、图像和水平分隔线。当把其他标签（比如  标签）放到  块中时，就像放在 HTML/XHTML 文档的其他部分中一样即可。
+
+提示和注释
+提示：制表符（tab）在  标签定义的块当中可以起到应有的作用，每个制表符占据 8 个字符的位置。但是我们不推荐使用它，因为在不同的浏览器中，Tab 的实现各不相同。在用  标签格式化的文档段中使用空格，可以确保文本正确的水平位置。
+提示：如果您希望使用  标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符，比如 &quot;&quot; 代表 &quot;&gt;&quot;，&quot;&amp;&quot; 代表 &quot;&amp;&quot;。
+提示：在 W3School 中，非常多页面中的源代码实例都是通过  标签定义的。
+
+markdown对应标记
+markdown行首输入四个连续空格即可实现对应的效果。
+
+markdown行首输入四个空格的效果：
+
+那一年 你正年轻
+总觉得明天肯定会很美
+以下是使用...引用代码块的示例：
+
+////  main.m//  EmptyApplication////  Created by faner on 15/9/5.//  Copyright © 2015年 faner. All rights reserved.//
+#import#import “AppDelegate.h”
+int main(int argc, char * argv[]) {    @autoreleasepool {        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));    }}以上将Xcode中的main.m代码直接拷到标签中，保持了原有的段落和缩进格式。如果要对代码进行语法着色，可采用在线SyntaxHighlighter插件，输入源程序代码，输出指定语言的着色 HTML 代码。Online syntax highlighter like TextMateOnline syntax highlighting for the masses!
+The End————————————————版权声明：本文为CSDN博主「弦苦」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。原文链接：https://blog.csdn.net/phunxm/article/details/48575817
+</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#null"><span class="nav-number">6.0.0.0.0.1.</span> <span class="nav-text"> 元素的 align 属性。请使用 CSS 代替。CSS 语法：这段文字居左显示。这段文字居中显示。这段文字居右显示。7 HTML 引用7.1 作品标题：...定义和用法 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。按照惯例，引用的文本将以斜体显示。用  标签把指向其他文档的引用分离出来，尤其是分离那些传统媒体中的文档，如书籍、杂志、期刊，等等。如果引用的这些文档有联机版本，还应该把引用包括在一个  标签中，从而把一个超链接指向该联机版本。
+示例
+《富春山居图》由黄公望始画于至正七年(1347)，于至正十年完成。
+7.2 短引用：...定义和用法 标签定义不需要段落分隔的短引用（行内引用）。浏览器经常在引用的内容周围添加引号。
+示例毛泽东说过：帝国主义都是纸老虎 ...
+cite属性q 元素中的 cite 属性指定了引用的来源，但主流浏览器均不支持 cite 属性，可以当做注释用：
+Here is a quote from WWF&#39;s website:
+WWF&#39;s ultimate goal is to build a future where people live in harmony with nature.
+We hope that they succeed.
+7.3 块引用：...定义和用法
+ 标签定义摘自另一个源的块引用。 与  之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进，而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+示例
+爱上一个人恋上一座城cite属性同 q 元素中的 cite 属性。
+markdown对应标记markdown中以&gt;开始的文字为块引用：
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义。直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般不建议使用blockquote（&gt;）标签来引用源代码。引用标记可以嵌套使用：
+梦
+梦中梦
+盗梦空间
+ 与  的区别 标签在本质上与  是一样的。不同之处在于它们的显示和应用。 标签用于简短的行内引用。如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用  标签。
+7.4 代码块以下是w3school中给出的“计算机输出”标签示例：
+Computer codeKeyboard inputTeletype textSample textComputer variable
+注释：这些标签常用于显示计算机/编程代码。
+7.4.1 代码块：...定义和用法 标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。如果只是希望使用等宽字体的效果，请使用  标签。或者，如果想要在严格限制为等宽字体格式的文本中显示编程代码，请使用  标签。
+markdown对应标记markdown对应...。
+示例心若没有栖息的地方到哪里都是流浪
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import 
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义；头文件包含的尖括号也需要加\转义。markdown的...中间的两个空格断行无效：心若没有栖息的地方 到哪里都是流浪直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般也不建议使用code（``）标签来引用源代码。7.4.2 代码块：...定义和用法pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+ 标签的一个常见应用就是用来表示计算机的源代码。
+可以导致段落断开的标签（例如标题、 和  标签）绝不能包含在  所定义的块里。
+pre 元素中允许的文本可以包括物理样式和基于内容的样式变化，还有链接、图像和水平分隔线。当把其他标签（比如  标签）放到  块中时，就像放在 HTML/XHTML 文档的其他部分中一样即可。
+
+提示和注释
+提示：制表符（tab）在  标签定义的块当中可以起到应有的作用，每个制表符占据 8 个字符的位置。但是我们不推荐使用它，因为在不同的浏览器中，Tab 的实现各不相同。在用  标签格式化的文档段中使用空格，可以确保文本正确的水平位置。
+提示：如果您希望使用  标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符，比如 &quot;&quot; 代表 &quot;&gt;&quot;，&quot;&amp;&quot; 代表 &quot;&amp;&quot;。
+提示：在 W3School 中，非常多页面中的源代码实例都是通过  标签定义的。
+
+markdown对应标记
+markdown行首输入四个连续空格即可实现对应的效果。
+
+markdown行首输入四个空格的效果：
+
+那一年 你正年轻
+总觉得明天肯定会很美
+以下是使用...引用代码块的示例：
+
+////  main.m//  EmptyApplication////  Created by faner on 15/9/5.//  Copyright © 2015年 faner. All rights reserved.//
+#import#import “AppDelegate.h”
+int main(int argc, char * argv[]) {    @autoreleasepool {        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));    }}以上将Xcode中的main.m代码直接拷到标签中，保持了原有的段落和缩进格式。如果要对代码进行语法着色，可采用在线SyntaxHighlighter插件，输入源程序代码，输出指定语言的着色 HTML 代码。Online syntax highlighter like TextMateOnline syntax highlighting for the masses!
+The End————————————————版权声明：本文为CSDN博主「弦苦」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。原文链接：https://blog.csdn.net/phunxm/article/details/48575817
+</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">7.</span> <span class="nav-text">这段文字居左显示。这段文字居中显示。这段文字居右显示。7 HTML 引用7.1 作品标题：...定义和用法 标签通常表示它所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。按照惯例，引用的文本将以斜体显示。用  标签把指向其他文档的引用分离出来，尤其是分离那些传统媒体中的文档，如书籍、杂志、期刊，等等。如果引用的这些文档有联机版本，还应该把引用包括在一个  标签中，从而把一个超链接指向该联机版本。
+示例
+《富春山居图》由黄公望始画于至正七年(1347)，于至正十年完成。
+7.2 短引用：...定义和用法 标签定义不需要段落分隔的短引用（行内引用）。浏览器经常在引用的内容周围添加引号。
+示例毛泽东说过：帝国主义都是纸老虎 ...
+cite属性q 元素中的 cite 属性指定了引用的来源，但主流浏览器均不支持 cite 属性，可以当做注释用：
+Here is a quote from WWF&#39;s website:
+WWF&#39;s ultimate goal is to build a future where people live in harmony with nature.
+We hope that they succeed.
+7.3 块引用：...定义和用法
+ 标签定义摘自另一个源的块引用。 与  之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进，而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+示例
+爱上一个人恋上一座城cite属性同 q 元素中的 cite 属性。
+markdown对应标记markdown中以&gt;开始的文字为块引用：
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义。直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般不建议使用blockquote（&gt;）标签来引用源代码。引用标记可以嵌套使用：
+梦
+梦中梦
+盗梦空间
+ 与  的区别 标签在本质上与  是一样的。不同之处在于它们的显示和应用。 标签用于简短的行内引用。如果需要从周围内容分离出来比较长的部分（通常显示为缩进的块），请使用  标签。
+7.4 代码块以下是w3school中给出的“计算机输出”标签示例：
+Computer codeKeyboard inputTeletype textSample textComputer variable
+注释：这些标签常用于显示计算机/编程代码。
+7.4.1 代码块：...定义和用法 标签通常只是把文本变成等宽字体，但它暗示着这段文本是源程序代码。如果只是希望使用等宽字体的效果，请使用  标签。或者，如果想要在严格限制为等宽字体格式的文本中显示编程代码，请使用  标签。
+markdown对应标记markdown对应...。
+示例心若没有栖息的地方到哪里都是流浪
+//// main.m// HelloWorld//// Created by faner on 15/8/30.// Copyright © 2015年 faner. All rights reserved.//
+#import 
+int main(int argc, const char * argv[]) {@autoreleasepool {// insert code here...NSLog(@&quot;Hello, World!&quot;);}return 0;}
+注意：
+每行后面需要添加两个空格断行。#号前面要加\转义；头文件包含的尖括号也需要加\转义。markdown的...中间的两个空格断行无效：心若没有栖息的地方 到哪里都是流浪直接复制过来的代码，行首的缩进格式丢失，需要自行补充空格占位符。故一般也不建议使用code（``）标签来引用源代码。7.4.2 代码块：...定义和用法pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。
+ 标签的一个常见应用就是用来表示计算机的源代码。
+可以导致段落断开的标签（例如标题、 和  标签）绝不能包含在  所定义的块里。
+pre 元素中允许的文本可以包括物理样式和基于内容的样式变化，还有链接、图像和水平分隔线。当把其他标签（比如  标签）放到  块中时，就像放在 HTML/XHTML 文档的其他部分中一样即可。
+
+提示和注释
+提示：制表符（tab）在  标签定义的块当中可以起到应有的作用，每个制表符占据 8 个字符的位置。但是我们不推荐使用它，因为在不同的浏览器中，Tab 的实现各不相同。在用  标签格式化的文档段中使用空格，可以确保文本正确的水平位置。
+提示：如果您希望使用  标签来定义计算机源代码，比如 HTML 源代码，请使用符号实体来表示特殊字符，比如 &quot;&quot; 代表 &quot;&gt;&quot;，&quot;&amp;&quot; 代表 &quot;&amp;&quot;。
+提示：在 W3School 中，非常多页面中的源代码实例都是通过  标签定义的。
+
+markdown对应标记
+markdown行首输入四个连续空格即可实现对应的效果。
+
+markdown行首输入四个空格的效果：
+
+那一年 你正年轻
+总觉得明天肯定会很美
+以下是使用...引用代码块的示例：
+
+////  main.m//  EmptyApplication////  Created by faner on 15/9/5.//  Copyright © 2015年 faner. All rights reserved.//
+#import#import “AppDelegate.h”
+int main(int argc, char * argv[]) {    @autoreleasepool {        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));    }}以上将Xcode中的main.m代码直接拷到标签中，保持了原有的段落和缩进格式。如果要对代码进行语法着色，可采用在线SyntaxHighlighter插件，输入源程序代码，输出指定语言的着色 HTML 代码。Online syntax highlighter like TextMateOnline syntax highlighting for the masses!
+The End————————————————版权声明：本文为CSDN博主「弦苦」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。原文链接：https://blog.csdn.net/phunxm/article/details/48575817
+</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Larry Chen</p>
+  <div class="site-description" itemprop="description">在这里分享各种java面试技巧与学习心得</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Larry Chen</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
